@@ -6,7 +6,7 @@ const playerBtn = document.querySelectorAll('.player-btn');
 const playerBlock = document.querySelectorAll('.player-block');
 const temp = document.querySelector('.temp');
 
-const deactivationPlater = () => {
+const deactivationPlayer = () => {
     temp.style.display = 'none';
     playerBtn.forEach(item => item.classList.remove('active'));
     playerBlock.forEach(item => item.classList.remove('active'));
@@ -14,13 +14,14 @@ const deactivationPlater = () => {
 
 playerBtn.forEach((btn, i) => {         //i - id in list of buttons
     btn.addEventListener('click', () => {
-        deactivationPlater();
+        deactivationPlayer();
         btn.classList.add('active');
         playerBlock[i].classList.add('active')
     })
 })
 
+videoPlayerInit();
+radioPlayerInit();
+musicPlayerInit();
 
 
-
-//console.log(playerBlock)
