@@ -56,9 +56,12 @@ export const radioPlayerInit = () => {
         toggleItemPlay();
     });
 
-    padioVolume.addEventListener('input', () => {
-        radioItem.volume = padioVolume.value / 100;
+    radioVolume.addEventListener('input', () => {
+        audio.volume = radioVolume.value / 100; 
     });
+
 };
+
+
 
 
